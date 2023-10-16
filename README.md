@@ -22,8 +22,8 @@ I need to make one job that does it all, and one XMIT file, but this is the quic
 (You can substitute IBMUSER with whatever user you are using)
 ```jcl
 //IBMUSERR JOB (RECV) 'RECEIVE FILE',CLASS=A,MSGCLASS=X              
-//RECV370 EXEC PGM=RECV370,REGION=8196K *May not be needed                    
-//STEPLIB   DD DSN=SYSC.LINKLIB,DISP=SHR                    
+//RECV370 EXEC PGM=RECV370,REGION=8196K                   
+//STEPLIB   DD DSN=SYSC.LINKLIB,DISP=SHR *May not be needed or different on your system                
 //RECVLOG   DD SYSOUT=*                                     
 //SYSPRINT  DD SYSOUT=*                                     
 //SYSIN     DD DUMMY                                        
