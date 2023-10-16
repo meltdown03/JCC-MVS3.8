@@ -47,7 +47,7 @@ You may have a different user catalog name, run `listcat` to see it
 
 Then set your normal prefix back with: `profile prefix(IBMUSER)`
 
-Next, just rename all the unloaded datasets and remove `IBMUSER.` from them so they are at HLQ JCC.
+Next, just rename all the unloaded datasets by removing `IBMUSER.` from them so they are at HLQ, 'JCC'.
 Another option is to change the SYSUT2 DD line in unload JCL above to just `JCC.%DS%` and then you don't have to
 rename it.
 
@@ -66,8 +66,8 @@ Finally, copy members from `JCC.PROCLIB` to `SYS2.PROCLIB` or `SYSC.PROCLIB` or 
 //                                                                 
 ```
 ## USING JCC
-Look in JCC.CTL for some examples, but these don't seem to use the PROC's, so I would check
-out the GCC examples and modify them or look on TK4/5 in `SYS2.JCLLIB`
+Look in JCC.CNTL for JCC usage, but these don't seem to use the PROC's, so I would check
+out the GCC examples and modify them for JCC or look on TK4/5 in `SYS2.JCLLIB`
 ```jcl
 //IBMUSERJ JOB (JCC),                                                        
 //            'Test JCCMVS',                                                    
